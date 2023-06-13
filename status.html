@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--? HEADER -->
+<head>
+
+  <!--! META -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <!--! STYLESHEETS -->
+  <link rel="icon" href="img/ico.png" type="image/x-icon" />
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="css/progressbar.min.css" rel="stylesheet">
+
+  <!--! SCRIPTS  -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  <title>RCA Research Project Survey - Thailand</title>
+
+</head>
+
+
+<body class="bg-light d-flex flex-column h-100" style="height: 100vh!important;" onpointermove="formatMax();" onmousemove="formatMax();">
+
+  <!--Main layout-->
+  <main class="flex-shrink-0" role="main">
+    <div class="container">
+
+      <div class="pt-3 text-center">
+        <img src="img/new_logo.svg" class="p-3" style="height:120px">
+        <img src="img/medcmu-logo.png" class="p-2" style="height:120px">
+        <h2 class="bolder">ตรวจสอบสถานะการกรอกแบบสอบถาม</h2>
+        <p class="lead"></p>
+      </div>
+
+
+      <hr class="my-4">
+
+      <ul class="nav nav-pills flex-column flex-sm-row">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-text" viewBox="0 0 18 18">
+              <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/>
+              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+            </svg>
+            กรอกแบบสอบถาม
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="manual.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear" viewBox="0 0 18 18">
+              <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+              <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+            </svg>
+            คู่มือการกรอกแบบสอบถาม
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="status.html">
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 18 18">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            ตรวจสอบสถานะ
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 18 18">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            ติดต่อสอบถาม
+          </a>
+        </li>
+      </ul>
+
+      <hr class="my-4">
+   
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          ตารางแสดงสถานะ
+        </div>
+        <div class="panel-body">
+
+          <!-- <div class="form-group pull-right">
+            
+            <input type="text" class="search form-control" placeholder="ค้นหา">
+      
+          </div>
+          
+          <br/> -->
+
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-hover table-sm results" id="example">
+              <thead id="table-head"></thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+        
+ 
+          <!-- Table -->
+          
+          <div class="form-group" style="text-align:right">
+
+            <button class="btn btn-danger btn-sm" id="btnHide" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 14 14">
+                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg>
+              รายละเอียดเพิ่มเติม
+            </button>
+
+            <button class="btn btn-success btn-sm" id="golink" style="display:none" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+              </svg>
+              Google Sheet
+            </button>
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      
+      <script>
+        $(document).ready(function() {
+        $(".search").keyup(function () {
+          var searchTerm = $(".search").val();
+          var listItem = $('.results tbody').children('tr');
+          var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+          
+        $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
+              return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+          }
+        });
+          
+        $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
+          $(this).attr('visible','false');
+        });
+      
+        $(".results tbody tr:containsi('" + searchSplit + "')").each(function(e){
+          $(this).attr('visible','true');
+        });
+      
+        var jobCount = $('.results tbody tr[visible="true"]').length;
+          $('.counter').text(jobCount + ' item');
+      
+        if(jobCount == '0') {$('.no-result').show();}
+          else {$('.no-result').hide();}
+            });
+      });
+      </script>
+
+      <script>
+        $(document).ready(function() {
+          $('#btnHide').click(function() {
+            const password = prompt("Enter the password");
+            if(password == "admin"){
+              $('td:nth-child(7),th:nth-child(7)').css('display', 'table-cell');
+              $('td:nth-child(8),th:nth-child(8)').css('display', 'table-cell');
+              $('td:nth-child(9),th:nth-child(9)').css('display', 'table-cell');
+              $('td:nth-child(10),th:nth-child(10)').css('display', 'table-cell');
+
+              document.getElementById("golink").style.display = "";
+              document.getElementById("btnHide").style.display = "none";
+              
+            }
+          });
+        });
+    </script>
+
+
+      <script>
+        $(document).ready(function() {
+          $('#golink').click(function() {
+
+            window.open('https://docs.google.com/spreadsheets/d/1gOjZ2Q93P5F7-5_3IaDGxmGtc6TAtcqX91SZzGKkAJI/edit#gid=482979969','_blank');
+            
+          });
+        });
+    </script>
+
+      
+
+
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+
+  <!--? FOOTER -->
+  <footer class="footer mt-auto py-3 my-3 pt-3 text-muted text-center text-small">
+    <p class="mb-1">©2023 RCA Research Project - Thailand</p>
+  </footer>
+
+  <!--? ALTERNATIVE SCRIPT -->
+  <!-- <script src="js/progressbar.js"></script> -->
+  <script src="js/form-validation.js"></script>
+
+
+</body>
+
+
+
+<!-- Google API -->
+<script src="https://apis.google.com/js/api.js"></script>
+<!-- easyData -->
+<script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+<!-- easyData - Creating table -->
+<script>
+  {
+    {
+      // Your API KEY
+      const API_KEY = "AIzaSyDreKveQdFF0U-YxOpz3N1XdK2014HOgsQ";
+
+      function displayResult2(response) {
+        let tableHead = "";
+        let tableBody = "";
+
+        response.result.values.forEach((row, index) => {
+          if (index === 0) {
+            tableHead += "<tr>";
+            row.forEach((val) => (tableHead += "<th scope='row'>" + val + "</th>"));
+            tableHead += "</tr>";
+          } else {
+            tableBody += "<tr>";
+            row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+            tableBody += "</tr>";
+            
+
+
+
+          }
+
+        });
+
+        document.getElementById("table-head").innerHTML = tableHead;
+        document.getElementById("table-body").innerHTML = tableBody;
+
+
+
+      }
+
+
+
+      function loadData() {
+        // Spreadsheet ID
+        const spreadsheetId = "1gPt8qqPHtq7idmj2-L0wJktNO_3xdwRY0-0hPbdNsEY";
+        const range = "A:Z";
+        getPublicValues({ spreadsheetId, range }, displayResult2);
+      }
+
+      window.addEventListener("load", (e) => {
+        initOAuthClient({ apiKey: API_KEY });
+      });
+
+      document.addEventListener("gapi-loaded", (e) => {
+        loadData();
+        
+      });
+    }
+  }
+
+
+
+</script>
+
+
+
+
+<script>
+  var tb = document.getElementById('example'),
+  tbody,
+  subtotal = [],
+  total = 0;
+
+function retrieveAllValues() {
+  total = 0;
+  for (var i = 0; i < tb.children.length; i++) {
+    if (tb.children[i].tagName === 'TBODY') {
+      tbody = tb.children[i];
+    }
+  } //loop ends after finding tbody inside the whole table
+
+
+  for (var j = 0; j < tbody.children.length; j++) {
+    var el = tbody.children[j];
+    for (var k = 0; k < el.children.length; k++) {
+      if (k == 2) {
+        total += parseInt(el.children[k].innerText, 10);
+        subtotal.push(el.children[k].innerText);
+      }
+    } // End of tr loop that ends after finding last cell with in each row
+  } // End of tbody loop that loop over each table row inside
+
+} // retrieveAllValues functions ends here
+
+
+function formatMax() {
+
+  for (var j = 0; j < tbody.children.length; j++) {
+    var el = tbody.children[j];
+
+    for (var k = 0; k < el.children.length; k++) {
+      if (k == el.children.length-1) {
+        // cVal holds the value of current cell
+        var cVal = el.children[5].innerText;
+        if (cVal == "สำเร็จ") {
+          el.children[5].classList.add('finish');
+        } else {
+          el.children[5].classList.add('not_finish');
+        }
+      }
+    } // End of tr loop that ends after finding last cell with in each row
+  } // End of tbody loop that loop over each table row inside
+} 
+
+retrieveAllValues();
+formatMax();
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
