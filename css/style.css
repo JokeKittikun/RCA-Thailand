@@ -1,0 +1,303 @@
+* {
+  font-family: "Sarabun", sans-serif !important;
+  font-size: 16px;
+}
+.container {
+  max-width: 95% !important;
+}
+
+/* bootstrap 4 panel */
+.panel {
+  margin-bottom: 16px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.panel-body {
+  padding: 16px;
+  color: rgb(41, 43, 44);
+  background-color: transparent;
+}
+
+/* colorize */
+.panel-default {
+  border-color: rgb(221, 221, 221);
+}
+.panel-default > .panel-heading {
+  color: rgb(51, 51, 51);
+  background-color: rgb(245, 245, 245);
+  border-color: rgb(221, 221, 221);
+}
+.panel-primary {
+  border-color: #0275d8;
+}
+.panel-primary > .panel-heading {
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+.panel-success {
+  border-color: #5cb85c;
+}
+.panel-success > .panel-heading {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.panel-info {
+  border-color: #5bc0de;
+}
+.panel-info > .panel-heading {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+.panel-warning {
+  border-color: #f0ad4e;
+}
+.panel-warning > .panel-heading {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.panel-danger {
+  border-color: #d9534f;
+}
+.panel-danger > .panel-heading {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.panel-equip {
+  background-color: #fffdee;
+}
+
+.panel-equips {
+  background-color: #fbfbfb;
+}
+
+
+.col-2 {
+  align-self: center;
+}
+
+.input-group-text {
+  font-size: 14px !important;
+  width: 60px;
+  padding: 0.375rem 0rem !important;
+  justify-content: center;
+}
+
+.form-label {
+  margin-bottom: 0 !important;
+}
+
+/* .row {
+    align-items: flex-start;
+} */
+
+.form-select select option:first-child {
+  color: gray !important;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04aa6d;
+}
+
+.row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.col-sm-3-grid {
+  width: 100%;
+}
+
+.resp-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 60%;
+}
+
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+.finish {
+  background-color: green !important;
+  color: white;
+}
+
+.not_finish {
+  background-color: rgb(157, 155, 155) !important;
+  color: white;
+}
+
+/* Status */
+td:nth-child(6) {
+  text-align: center !important;
+}
+
+
+
+#example {
+  font-size: 14px !important;
+}
+
+/* .results tr[visible="false"],
+.no-result {
+  display: none
+}
+
+.results tr[visible="true"] {
+  display: table-row
+} */
+
+.counter {
+  padding: 8px;
+  color: #ccc;
+}
+
+
+.results th:nth-child(7), th:nth-child(8), th:nth-child(9), th:nth-child(10) {
+  display: none;
+}
+.results td:nth-child(7), td:nth-child(8), td:nth-child(9), td:nth-child(10) {
+  display: none;
+}
+
+
+
+
+
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+}
+
+
+
+
+.row-equip {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-top: calc(0.5 * var(--bs-gutter-y));
+
+
+}
+.row-equip>* {
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+
+.form-control:disabled, .form-control[readonly] { 
+  color: gray
+ }
+
+
+ .bluecolor{
+  color: #084298!important;
+ }
+
+ .redcolor{
+  color: #d50000!important;
+ }
+
+ .graycolor {
+  color: rgb(88, 88, 88)!important;
+ }
+
+ .align-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+
+ .hr-body {
+  margin: 0.75rem 0;
+  opacity: .1;
+
+ }
+
+ .mgmanual {
+  margin-bottom: 1rem;
+ }
+
+ .text-p{
+  margin:0;
+ }
+ .text-detail{
+  margin-left:60px;
+ }
+
+ .text-details{
+  margin-left:75px;
+ }
+ .text-detailss{
+  margin-left:100px;
+ }
+
+ .fs-18{
+  font-size: 18px!important;
+ }
